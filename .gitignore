@@ -1,0 +1,21 @@
+# folders
+node_modules
+.vscode
+.idea
+archive
+build
+
+
+# files
+package-lock.json
+.env
+
+
+# Debug log from npm
+npm-debug.log
+.DS_Store
+.env
+
+# Logs
+logs
+*.log
