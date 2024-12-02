@@ -209,7 +209,7 @@ export const getTotalByContent = asyncHandler(async (req, res) => {
             efficiency: { total: totalEfficiencyRegular },
             chances: totalChanceRegular,
          };
-         if (completedSeasons.length > 1) {
+         if (completedSeasons.length > 1 && lastSeason[0].regular) {
             const lastSeasonRegular = lastSeason[0].regular;
             const prevQualitiesRegular = subtractArrays(
                totalRegular.qualities,
@@ -252,7 +252,7 @@ export const getTotalByContent = asyncHandler(async (req, res) => {
             efficiency: { total: totalEfficiencyTournament },
             chances: totalChanceTournament,
          };
-         if (completedSeasons.length > 1) {
+         if (completedSeasons.length > 1 && lastSeason[0].tournament) {
             const lastSeasonTournament = lastSeason[0].tournament;
             const prevQualitiesTournament = subtractArrays(
                totalTournament.qualities,
